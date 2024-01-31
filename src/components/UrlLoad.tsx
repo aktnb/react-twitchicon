@@ -9,8 +9,12 @@ type Params = {
 
 function getUrl(token: string) {
   if ('' === token) return '';
+  let port = '';
+  if (window.location.port !== '80' && window.location.port !== '443') {
+    port = ':' + window.location.port;
+  }
   return window.location.hostname
-    + (window.location.port === '80' ? '' : `:${window.location.port}`)
+    + port
     + '/viewer?q=' + token;
 }
 
