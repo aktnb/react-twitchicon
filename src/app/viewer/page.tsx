@@ -1,3 +1,5 @@
+'use server';
+
 import { searchUsers } from '../actions';
 import { TwitchUserIcon } from '@/components/TwitchUserIcon';
 

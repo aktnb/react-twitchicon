@@ -1,6 +1,6 @@
 'use server';
 
-export default function Page() {
+export default async function Page() {
   return (
     <span>{process.env.TEST_ENV}</span>
   )
